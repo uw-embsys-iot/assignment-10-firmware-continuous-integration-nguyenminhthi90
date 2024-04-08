@@ -1,5 +1,6 @@
 name: Build
 
+# IOTEMBSYS10: Change this to only apply to specific branches, if desired
 on: [pull_request]
 
 jobs:
@@ -9,31 +10,31 @@ jobs:
     env:
       CMAKE_PREFIX_PATH: /opt/toolchains
     steps:
+      # IOTEMBSYS10: Add a step to checkout the repo
       - name: Checkout
         uses: actions/checkout@v2
         with:
           path: embsys-firmware
 
+      # IOTEMBSYS10: Add a step to initialize the west workspace
       - name: Initialize
         working-directory: embsys-firmware
         run: |
           west init -l .
           west update
-
+      # IOTEMBSYS10: Add a step to build the application
       - name: Build firmware
         working-directory: embsys-firmware
         run: |
-          west build -b stm32l496_cell app
-
+          west build -p -b stm32l496_cell app -- -DEXTRA_CONF_FILE="mcumgr.conf" -DCONFIG_MCUBOOT_SIGNATURE_KEY_FILE=\"E:/IOT_EMB_SYS/Firmware_workspace/assignment-10/conf/root-rsa-2048.pem\"
+      # IOTEMBSYS10: Add a step to run the unit tests with twister
       - name: Twister Tests
         working-directory: embsys-firmware
         shell: bash
         run: |
           west twister -T tests -v --inline-logs --integration
-
-      - name: Archive firmware git add .
-        uses: actions/upload-artifact@v2  
+      - name: Archive firmware
+        uses: actions/upload-artifact@v2
         with:
           name: firmware
           path: embsys-firmware/build/zephyr/zephyr.*
-# Part1, step 4, test pull request

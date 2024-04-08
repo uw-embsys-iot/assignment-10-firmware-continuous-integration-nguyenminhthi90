@@ -27,7 +27,12 @@ jobs:
         working-directory: embsys-firmware
         run: |
           west build -p -b stm32l496_cell app -- -DEXTRA_CONF_FILE="mcumgr.conf" -DCONFIG_MCUBOOT_SIGNATURE_KEY_FILE=\"E:/IOT_EMB_SYS/Firmware_workspace/assignment-10/conf/root-rsa-2048.pem\"
-      # IOTEMBSYS10: Add a step to run the unit tests with twister      
+      # IOTEMBSYS10: Add a step to run the unit tests with twister
+      - name: Twister Tests
+        working-directory: embsys-firmware
+        shell: bash
+        run: |
+          west twister -T tests -v --inline-logs --integration      
       - name: Archive firmware
         uses: actions/upload-artifact@v2
         with:

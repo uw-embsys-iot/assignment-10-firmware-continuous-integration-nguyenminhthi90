@@ -31,7 +31,7 @@ jobs:
         run: |
           west twister -T tests -v --inline-logs --integration
 
-      - name: Archive firmware 
+      - name: Archive firmware git add .
         uses: actions/upload-artifact@v2  
         with:
           name: firmware

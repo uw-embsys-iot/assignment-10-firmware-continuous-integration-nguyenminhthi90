@@ -26,7 +26,7 @@ jobs:
       - name: Build firmware
         working-directory: embsys-firmware
         run: |
-          west build -b stm32l496_cell app
+          west build -b stm32l496_cell app -p -- -DCONFIG_MCUBOOT_SIGNATURE_KEY_FILE=\"embsys-firmware/conf/root-rsa-2048.pem\" -DEXTRA_CONF_FILE=mcumgr.conf
       # IOTEMBSYS10: Add a step to run the unit tests with twister
       - name: Twister Tests
         working-directory: embsys-firmware

@@ -1211,16 +1211,16 @@ static const struct setup_cmd setup_cmds[] = {
     SETUP_CMD_NOHANDLE("AT+CFUN=0,0"),
 
     // Use Cat M1 mode and take effect immediately
-    SETUP_CMD_NOHANDLE("AT+QCFG=\"iotopmode\",0,1"),
+    SETUP_CMD_NOHANDLE("AT+QCFG=\"iotopmode\",1,1"),
 
     // Set up the RAT search sequence (CAT-M1, NB-IoT, GSM)
-    SETUP_CMD_NOHANDLE("AT+QCFG=\"nwscanseq\",00,1"),
+    SETUP_CMD_NOHANDLE("AT+QCFG=\"nwscanseq\",03,1"),
 
     // Set allowable RATs; 3 = LTE-only, 1 = take effect immediately
     SETUP_CMD_NOHANDLE("AT+QCFG=\"nwscanmode\",3,1"),
 
     // Set the band configuration to any
-    //SETUP_CMD_NOHANDLE("AT+QCFG=\"band\",0xf,0x400a0e189f,0xa0e189f,1"),
+    SETUP_CMD_NOHANDLE("AT+QCFG=\"band\",0,0,4,1"),
 
     // IOTEMBSYS: Go into full functionality mode
     SETUP_CMD_NOHANDLE("AT+CFUN=1,0"),

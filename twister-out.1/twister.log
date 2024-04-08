@@ -1,0 +1,93 @@
+2024-04-08 16:24:48,071 - twister - INFO - Using Ninja..
+2024-04-08 16:24:48,564 - twister - INFO - Zephyr version: v3.4.0-rc1
+2024-04-08 16:24:48,624 - twister - DEBUG - Running cmake script E:\IOT_EMB_SYS\Firmware_workspace\zephyr\cmake\verify-toolchain.cmake
+2024-04-08 16:24:48,626 - twister - DEBUG - Calling cmake: ['C:\\Program Files\\CMake\\bin\\cmake.EXE', '-DFORMAT=json', '-P', 'E:\\IOT_EMB_SYS\\Firmware_workspace\\zephyr\\cmake\\verify-toolchain.cmake']
+2024-04-08 16:24:49,328 - twister - DEBUG - Finished running  E:\IOT_EMB_SYS\Firmware_workspace\zephyr\cmake\verify-toolchain.cmake
+2024-04-08 16:24:49,328 - twister - INFO - Using 'zephyr' toolchain.
+2024-04-08 16:24:49,730 - twister - DEBUG - Reading test case configuration files under E:\IOT_EMB_SYS\Firmware_workspace\assignment-10\tests...
+2024-04-08 16:24:49,730 - twister - DEBUG - Found possible testsuite in E:\IOT_EMB_SYS\Firmware_workspace\assignment-10\tests\lib\custom_lib
+2024-04-08 16:24:49,746 - twister - DEBUG - No duplicates found.
+2024-04-08 16:24:49,754 - twister - DEBUG - Reading platform configuration files under E:\IOT_EMB_SYS\Firmware_workspace\zephyr\boards...
+2024-04-08 16:24:49,956 - twister - DEBUG - adding nsim_hs_mpuv6 to default platforms
+2024-04-08 16:24:49,964 - twister - DEBUG - adding nsim_hs_smp to default platforms
+2024-04-08 16:24:49,976 - twister - DEBUG - adding nsim_sem to default platforms
+2024-04-08 16:24:49,992 - twister - DEBUG - adding qemu_arc_em to default platforms
+2024-04-08 16:24:49,998 - twister - DEBUG - adding qemu_arc_hs to default platforms
+2024-04-08 16:24:50,005 - twister - DEBUG - adding qemu_arc_hs5x to default platforms
+2024-04-08 16:24:50,011 - twister - DEBUG - adding qemu_arc_hs6x to default platforms
+2024-04-08 16:24:50,016 - twister - DEBUG - adding qemu_arc_hs_xip to default platforms
+2024-04-08 16:24:50,450 - twister - DEBUG - adding kv260_r5 to default platforms
+2024-04-08 16:24:50,574 - twister - DEBUG - adding mps2_an385 to default platforms
+2024-04-08 16:24:50,578 - twister - DEBUG - adding mps2_an521 to default platforms
+2024-04-08 16:24:50,581 - twister - DEBUG - adding mps2_an521_ns to default platforms
+2024-04-08 16:24:50,583 - twister - DEBUG - adding mps2_an521_remote to default platforms
+2024-04-08 16:24:50,586 - twister - DEBUG - adding mps3_an547_ns to default platforms
+2024-04-08 16:24:50,943 - twister - DEBUG - adding qemu_cortex_a9 to default platforms
+2024-04-08 16:24:50,946 - twister - DEBUG - adding qemu_cortex_m0 to default platforms
+2024-04-08 16:24:50,953 - twister - DEBUG - adding qemu_cortex_r5 to default platforms
+2024-04-08 16:24:51,684 - twister - DEBUG - adding qemu_cortex_a53 to default platforms
+2024-04-08 16:24:51,692 - twister - DEBUG - adding qemu_cortex_a53_smp to default platforms
+2024-04-08 16:24:51,696 - twister - DEBUG - adding qemu_cortex_a53_xip to default platforms
+2024-04-08 16:24:51,716 - twister - DEBUG - adding qemu_malta to default platforms
+2024-04-08 16:24:51,722 - twister - DEBUG - adding qemu_malta_be to default platforms
+2024-04-08 16:24:51,729 - twister - DEBUG - adding qemu_nios2 to default platforms
+2024-04-08 16:24:51,741 - twister - DEBUG - adding native_posix to default platforms
+2024-04-08 16:24:51,843 - twister - DEBUG - adding m2gl025_miv to default platforms
+2024-04-08 16:24:51,875 - twister - DEBUG - adding qemu_riscv32 to default platforms
+2024-04-08 16:24:51,885 - twister - DEBUG - adding qemu_riscv32_smp to default platforms
+2024-04-08 16:24:51,893 - twister - DEBUG - adding qemu_riscv32_xip to default platforms
+2024-04-08 16:24:51,900 - twister - DEBUG - adding qemu_riscv32e to default platforms
+2024-04-08 16:24:51,907 - twister - DEBUG - adding qemu_riscv64 to default platforms
+2024-04-08 16:24:51,915 - twister - DEBUG - adding qemu_riscv64_smp to default platforms
+2024-04-08 16:24:51,985 - twister - DEBUG - adding qemu_leon3 to default platforms
+2024-04-08 16:24:52,019 - twister - DEBUG - adding qemu_x86 to default platforms
+2024-04-08 16:24:52,025 - twister - DEBUG - adding qemu_x86_64 to default platforms
+2024-04-08 16:24:52,026 - twister - DEBUG - adding qemu_x86_64_nokpti to default platforms
+2024-04-08 16:24:52,026 - twister - DEBUG - adding qemu_x86_lakemont to default platforms
+2024-04-08 16:24:52,043 - twister - DEBUG - adding qemu_x86_nokpti to default platforms
+2024-04-08 16:24:52,048 - twister - DEBUG - adding qemu_x86_nommu to default platforms
+2024-04-08 16:24:52,048 - twister - DEBUG - adding qemu_x86_nopae to default platforms
+2024-04-08 16:24:52,061 - twister - DEBUG - adding qemu_x86_tiny to default platforms
+2024-04-08 16:24:52,061 - twister - DEBUG - adding qemu_x86_virt to default platforms
+2024-04-08 16:24:52,061 - twister - DEBUG - adding qemu_x86_xip to default platforms
+2024-04-08 16:24:52,177 - twister - DEBUG - adding qemu_xtensa to default platforms
+2024-04-08 16:24:52,185 - twister - DEBUG - adding xt-sim to default platforms
+2024-04-08 16:24:52,185 - twister - DEBUG - Reading platform configuration files under E:\IOT_EMB_SYS\Firmware_workspace\zephyr\scripts\pylib\twister\boards...
+2024-04-08 16:24:52,185 - twister - DEBUG - adding unit_testing to default platforms
+2024-04-08 16:24:52,185 - twister - DEBUG - Reading platform configuration files under E:\IOT_EMB_SYS\Firmware_workspace\assignment-10\boards...
+2024-04-08 16:24:52,193 - twister - DEBUG - platform filter: None
+2024-04-08 16:24:52,193 - twister - DEBUG -     arch_filter: None
+2024-04-08 16:24:52,193 - twister - DEBUG -      tag_filter: None
+2024-04-08 16:24:52,193 - twister - DEBUG -     exclude_tag: None
+2024-04-08 16:24:52,193 - twister - INFO - Selecting default platforms per test case
+2024-04-08 16:24:52,209 - twister - INFO - Building initial testsuite list...
+2024-04-08 16:24:52,210 - twister - INFO - Writing JSON report E:\IOT_EMB_SYS\Firmware_workspace\assignment-10\twister-out\testplan.json
+2024-04-08 16:24:52,306 - twister - INFO - Adding tasks to the queue...
+2024-04-08 16:24:52,306 - twister - DEBUG - adding qemu_cortex_m0\lib\custom_lib\lib.custom_lib
+2024-04-08 16:24:52,605 - twister - DEBUG - adding qemu_cortex_m0\lib\custom_lib\lib.custom_lib.non_default
+2024-04-08 16:24:52,605 - twister - INFO - Added initial list of jobs to queue
+2024-04-08 16:24:52,605 - twister - DEBUG - Launch process 0
+2024-04-08 16:24:52,661 - twister - DEBUG - Launch process 1
+2024-04-08 16:24:52,714 - twister - DEBUG - Launch process 2
+2024-04-08 16:24:52,769 - twister - DEBUG - Launch process 3
+2024-04-08 16:24:52,830 - twister - DEBUG - Launch process 4
+2024-04-08 16:24:52,887 - twister - DEBUG - Launch process 5
+2024-04-08 16:24:52,947 - twister - DEBUG - Launch process 6
+2024-04-08 16:24:53,010 - twister - DEBUG - Launch process 7
+2024-04-08 16:24:53,094 - twister - DEBUG - Launch process 8
+2024-04-08 16:24:53,159 - twister - DEBUG - Launch process 9
+2024-04-08 16:24:53,243 - twister - DEBUG - Launch process 10
+2024-04-08 16:24:53,328 - twister - DEBUG - Launch process 11
+2024-04-08 16:25:21,309 - twister - INFO - 2 test scenarios (2 test instances) selected, 0 configurations skipped (0 by static filter, 0 at runtime).
+2024-04-08 16:25:21,309 - twister - INFO - [32m2 of 2[39m test configurations passed (100.00%), [39m0[39m failed, [39m0[39m errored, 0 skipped with [39m0[39m warnings in 33.24 seconds
+2024-04-08 16:25:21,309 - twister - INFO - In total 2 test cases were executed, 0 skipped on 1 out of total 574 platforms (0.17%)
+2024-04-08 16:25:21,309 - twister - INFO - [32m0[39m test configurations executed on platforms, [31m2[39m test configurations were only built.
+2024-04-08 16:25:21,309 - twister - INFO - Saving reports...
+2024-04-08 16:25:21,309 - twister - INFO - Writing JSON report E:\IOT_EMB_SYS\Firmware_workspace\assignment-10\twister-out\twister.json
+2024-04-08 16:25:21,309 - twister - INFO - Writing xunit report E:\IOT_EMB_SYS\Firmware_workspace\assignment-10\twister-out\twister.xml...
+2024-04-08 16:25:21,309 - twister - INFO - Writing xunit report E:\IOT_EMB_SYS\Firmware_workspace\assignment-10\twister-out\twister_report.xml...
+2024-04-08 16:25:21,309 - twister - DEBUG - lib.custom_lib.get_value: No status
+2024-04-08 16:25:21,309 - twister - DEBUG - lib.custom_lib.non_default.get_value: No status
+2024-04-08 16:25:21,309 - twister - DEBUG - lib.custom_lib.get_value: No status
+2024-04-08 16:25:21,309 - twister - DEBUG - lib.custom_lib.non_default.get_value: No status
+2024-04-08 16:25:21,309 - twister - INFO - Run completed

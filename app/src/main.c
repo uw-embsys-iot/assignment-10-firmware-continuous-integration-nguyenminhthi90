@@ -917,6 +917,7 @@ void main(void)
 		return;
 	}
 
+	printk("Version 2\r\n");
 	LOG_INF("Running blinky");
 	while (1) {
 		ret = gpio_pin_toggle_dt(&led);

@@ -31,8 +31,9 @@ jobs:
         run: |
           west twister -T tests -v --inline-logs --integration
 
-      - name: Archive firmware
-        uses: actions/upload-artifact@v2
+      - name: Archive firmware 
+        uses: actions/upload-artifact@v2  
         with:
           name: firmware
           path: embsys-firmware/build/zephyr/zephyr.*
+# Part1, step 4, test pull request

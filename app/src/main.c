@@ -110,7 +110,7 @@ static uint8_t recv_buf_[MAX_RECV_BUF_LEN];
 
 /* IOTEMBSYS: Create a buffer for receiving the OTA path */
 // TODO(mskobov): this should not be static!
-static char ota_path_[128] = "/does_not_exist/zephyr.signed.bin";
+static char ota_path_[128] = "/ac3c79377f986c4fb11a2fcc253f1d93d2648a62.signed.bin";
 
 /* IOTEMBSYS: Consider provisioning a device ID. */
 static const char kDeviceId[] = "12345";
@@ -376,7 +376,7 @@ static void generic_http_request(void) {
 
 // You will need to change this to match your host
 // WARNING: This will change with each new EC2 instance!
-#define EC2_HOST "ec2-34-224-91-168.compute-1.amazonaws.com"
+#define EC2_HOST "ec2-3-81-135-177.compute-1.amazonaws.com"
 #define BACKEND_PORT 8080
 #define BACKEND_HOST EC2_HOST ":8080"
 static struct addrinfo* backend_addr_;
@@ -678,7 +678,7 @@ static void backend_ota_http_request(void) {
 // OTA Download Section
 //
 #define OTA_HTTP_PORT 80
-#define OTA_HOST "iotemb-firmware-releases.s3.amazonaws.com"
+#define OTA_HOST "thinguyen-firmware-releases.s3.amazonaws.com"
 static int total_read_size;
 static int total_write_size;
 static int content_length_;
@@ -917,6 +917,7 @@ void main(void)
 		return;
 	}
 
+	printk("Version 1\r\n");
 	LOG_INF("Running blinky");
 	while (1) {
 		ret = gpio_pin_toggle_dt(&led);

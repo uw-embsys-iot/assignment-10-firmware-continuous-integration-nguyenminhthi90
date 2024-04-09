@@ -11,7 +11,7 @@
  * library works correctly.
  */
 
-
+//original code
 /*
 #include <limits.h>
 
@@ -44,34 +44,28 @@ ZTEST(custom_lib, test_get_value)
 ZTEST_SUITE(custom_lib, NULL, NULL, NULL, NULL, NULL);
 */
 
-//The above code is original, the below code is a sample test
-/* Copyright and license statements remain unchanged */
-
-/* File description remains unchanged */
-
+//new code
 #include <limits.h>
+
 #include <zephyr/ztest.h>
 
-/* Include the necessary header for custom_lib_get_value */
-//#include <custom_lib/custom_lib.h>
-
-/* Define a constant value to return */
-#define RETURN_VALUE 9
-
-// Function to always return the constant value
-int custom_lib_get_value(int input) {
-    // The original function body can be completely replaced with this line
-    return RETURN_VALUE;
-}
+#include <custom_lib/custom_lib.h>
 
 ZTEST(custom_lib, test_get_value)
 {
-    zassert_equal(custom_lib_get_value(0), RETURN_VALUE,
-                  "get_value failed with input of 0");
-	zassert_equal(custom_lib_get_value(1), RETURN_VALUE,
-                  "get_value failed with input of 1");
-	zassert_equal(custom_lib_get_value(2), RETURN_VALUE,
-                  "get_value failed with input of 2");				  
+	//Verify standard behavior
+	zassert_equal(custom_lib_get_value(INT_MIN), 9,
+		"get_value failed input of INT_MIN");
+	zassert_equal(custom_lib_get_value(INT_MIN + 1), 9,
+		"get_value failed input of INT_MIN + 1");
+	zassert_equal(custom_lib_get_value(-1), 9,
+		"get_value failed input of -1");
+	zassert_equal(custom_lib_get_value(1), 9,
+		"get_value failed input of 1");
+	zassert_equal(custom_lib_get_value(INT_MAX - 1), 9,
+		"get_value failed input of INT_MAX - 1");
+	zassert_equal(custom_lib_get_value(INT_MAX), 9,
+		"get_value failed input of INT_MAX");
 }
 
 ZTEST_SUITE(custom_lib, NULL, NULL, NULL, NULL, NULL);

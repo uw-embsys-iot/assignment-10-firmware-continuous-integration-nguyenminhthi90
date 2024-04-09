@@ -886,7 +886,7 @@ void main(void)
 		LOG_ERR("Modem is not ready");
 		return;
 	}
-	printk("Stretch goal, new test library!");
+	printk("Stretch goal, new test library v3!");
 	LOG_INF("Running blinky");
 	while (1) {
 		ret = gpio_pin_toggle_dt(&led);

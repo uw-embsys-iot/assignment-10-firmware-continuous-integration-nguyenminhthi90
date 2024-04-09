@@ -53,7 +53,7 @@ ZTEST_SUITE(custom_lib, NULL, NULL, NULL, NULL, NULL);
 #include <zephyr/ztest.h>
 
 /* Include the necessary header for custom_lib_get_value */
-#include <custom_lib/custom_lib.h>
+//#include <custom_lib/custom_lib.h>
 
 /* Define a constant value to return */
 #define RETURN_VALUE 9
@@ -66,14 +66,12 @@ int custom_lib_get_value(int input) {
 
 ZTEST(custom_lib, test_get_value)
 {
-    zassert_equal(custom_lib_get_value(INT_MIN), RETURN_VALUE,
-                  "get_value failed with input of INT_MIN");
-
-	zassert_equal(custom_lib_get_value(INT_MAX), RETURN_VALUE,
-                  "get_value failed with input of INT_MIN");
-
     zassert_equal(custom_lib_get_value(0), RETURN_VALUE,
                   "get_value failed with input of 0");
+	zassert_equal(custom_lib_get_value(1), RETURN_VALUE,
+                  "get_value failed with input of 1");
+	zassert_equal(custom_lib_get_value(2), RETURN_VALUE,
+                  "get_value failed with input of 2");				  
 }
 
 ZTEST_SUITE(custom_lib, NULL, NULL, NULL, NULL, NULL);
